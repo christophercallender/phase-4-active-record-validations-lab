@@ -8,7 +8,7 @@ class Post < ApplicationRecord
   def validate_title
     if title.present?
       unless title.include?("Won't Believe" || "Secret" || "Top" || "Guess")
-        errors.add(:title, "clickbait")
+        errors.add(:title, "not clickbait")
       end
     end
   end
